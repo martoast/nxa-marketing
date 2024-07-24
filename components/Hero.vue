@@ -12,9 +12,7 @@
                 class="h-8 w-auto"
                 width="32"
                 height="32"
-                sizes="32px"
                 format="svg"
-                loading="eager"
               />
             </a>
             <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700 lg:hidden" @click="mobileMenuOpen = true">
@@ -41,7 +39,6 @@
                 height="32"
                 sizes="32px"
                 format="svg"
-                loading="eager"
               />
             </a>
             <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = false">
@@ -85,14 +82,13 @@
         </div>
       </div>
       <div class="bg-gray-50 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-        <NuxtImg
+        <nuxt-img
           src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80"
           alt="Team collaborating on a project"
           class="aspect-[3/2] object-cover lg:aspect-auto lg:h-full lg:w-full"
-          sizes="(max-width: 1024px) 100vw, 50vw"
+          sizes="sm:100vw md:50vw lg:800px"
           width="1587"
           height="1058"
-          loading="eager"
         />
       </div>
     </div>

@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss', "@nuxt/image"],
   image: {
     provider: 'netlify',
-    domains: ['images.unsplash.com', 'tailwindui.com']
+    domains: ['images.unsplash.com', 'tailwindui.com'],
+    format: ['webp', 'avif', 'png', 'jpg'],
   }
 })
