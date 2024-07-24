@@ -20,7 +20,6 @@
                     width="40"
                     height="40"
                     sizes="40px"
-                    loading="lazy"
                   />
                   <div>
                     <div class="font-semibold text-gray-900">{{ testimonial.author.name }}</div>
@@ -44,7 +43,7 @@
       author: {
         name: 'Sarah Johnson',
         handle: 'sarahjohnson',
-        imageUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        imageUrl: '/testimonial.webp',
       },
     },
     {
@@ -52,7 +51,7 @@
       author: {
         name: 'Michael Chen',
         handle: 'michaelchen',
-        imageUrl: 'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        imageUrl: '/testimonial.webp',
       },
     },
     {
@@ -60,7 +59,7 @@
       author: {
         name: 'Emily Rodriguez',
         handle: 'emilyrodriguez',
-        imageUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        imageUrl: '/testimonial.webp',
       },
     },
     {
@@ -68,7 +67,7 @@
       author: {
         name: 'David Thompson',
         handle: 'davidthompson',
-        imageUrl: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        imageUrl: '/testimonial.webp',
       },
     },
     {
@@ -76,7 +75,7 @@
       author: {
         name: 'Amanda Patel',
         handle: 'amandapatel',
-        imageUrl: 'https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        imageUrl: '/testimonial.webp',
       },
     },
   ])

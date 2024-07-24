@@ -32,7 +32,7 @@
             <a href="#" class="-m-1.5 p-1.5">
               <span class="sr-only">Your Company</span>
               <NuxtImg
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                src="/logo.svg"
                 alt="Your Company"
                 class="h-8 w-auto"
                 width="32"

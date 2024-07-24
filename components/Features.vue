@@ -22,7 +22,6 @@
                 :height="feature.imageHeight"
                 sizes="(min-width: 1024px) 58.33vw, 100vw"
                 format="webp"
-                loading="lazy"
               />
             </div>
           </div>
