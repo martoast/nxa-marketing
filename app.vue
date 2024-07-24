@@ -23,6 +23,11 @@
 
 useHead({
   title: 'NXA-Marketing - Grow Your Brand',
+  description: 'Get more traffic. Acquire more customers. Sell more stuff. SmartSites works for businesses of all sizes.',
+  ogDescription: 'Get more traffic. Acquire more customers. Sell more stuff. SmartSites works for businesses of all sizes.',
+  htmlAttrs: {
+    lang: 'en'
+  }
 })
 
 
