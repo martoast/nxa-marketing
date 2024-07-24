@@ -14,13 +14,15 @@
           </div>
           <div :class="[featureIdx % 2 === 0 ? 'lg:col-start-6 xl:col-start-5' : 'lg:col-start-1', 'flex-auto lg:col-span-7 lg:row-start-1 xl:col-span-8']">
             <div class="aspect-h-2 aspect-w-5 overflow-hidden rounded-lg bg-gray-100">
-              <img 
+              <NuxtImg 
                 :src="feature.imageSrc" 
                 :alt="feature.imageAlt" 
                 class="object-cover object-center" 
-                loading="lazy"
                 :width="feature.imageWidth"
                 :height="feature.imageHeight"
+                sizes="(min-width: 1024px) 58.33vw, 100vw"
+                format="webp"
+                loading="lazy"
               />
             </div>
           </div>
@@ -31,6 +33,8 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
+
 const features = ref([
   {
     name: 'Improve your ROI with scalable PPC marketing.',

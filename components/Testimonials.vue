@@ -10,10 +10,19 @@
             <div v-for="testimonial in testimonials" :key="testimonial.author.handle" class="pt-8 sm:inline-block sm:w-full sm:px-4">
               <figure class="rounded-2xl bg-gray-50 p-8 text-sm leading-6">
                 <blockquote class="text-gray-900">
-                  <p>{{ `“${testimonial.body}”` }}</p>
+                  <p>{{ `"${testimonial.body}"` }}</p>
                 </blockquote>
                 <figcaption class="mt-6 flex items-center gap-x-4">
-                  <img class="h-10 w-10 rounded-full bg-gray-50" :src="testimonial.author.imageUrl" alt="" />
+                  <NuxtImg
+                    class="h-10 w-10 rounded-full bg-gray-50"
+                    :src="testimonial.author.imageUrl"
+                    :alt="`Avatar of ${testimonial.author.name}`"
+                    width="40"
+                    height="40"
+                    sizes="40px"
+                    format="webp"
+                    loading="lazy"
+                  />
                   <div>
                     <div class="font-semibold text-gray-900">{{ testimonial.author.name }}</div>
                     <div class="text-gray-600">{{ `@${testimonial.author.handle}` }}</div>
@@ -28,46 +37,48 @@
   </template>
   
   <script setup>
-  const testimonials = [
-  {
-    body: "The service exceeded all my expectations. The team was incredibly responsive and delivered a product that perfectly met our needs. I couldn't be happier with the results!",
-    author: {
-      name: 'Sarah Johnson',
-      handle: 'sarahjohnson',
-      imageUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  import { ref } from 'vue'
+  
+  const testimonials = ref([
+    {
+      body: "The service exceeded all my expectations. The team was incredibly responsive and delivered a product that perfectly met our needs. I couldn't be happier with the results!",
+      author: {
+        name: 'Sarah Johnson',
+        handle: 'sarahjohnson',
+        imageUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      },
     },
-  },
-  {
-    body: 'I was impressed by the attention to detail and the quality of work. The project was completed on time and within budget. I highly recommend their services to anyone looking for top-notch results.',
-    author: {
-      name: 'Michael Chen',
-      handle: 'michaelchen',
-      imageUrl: 'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    {
+      body: 'I was impressed by the attention to detail and the quality of work. The project was completed on time and within budget. I highly recommend their services to anyone looking for top-notch results.',
+      author: {
+        name: 'Michael Chen',
+        handle: 'michaelchen',
+        imageUrl: 'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      },
     },
-  },
-  {
-    body: 'Working with this team was a game-changer for our business. Their innovative solutions and dedication to customer satisfaction set them apart from the competition.',
-    author: {
-      name: 'Emily Rodriguez',
-      handle: 'emilyrodriguez',
-      imageUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    {
+      body: 'Working with this team was a game-changer for our business. Their innovative solutions and dedication to customer satisfaction set them apart from the competition.',
+      author: {
+        name: 'Emily Rodriguez',
+        handle: 'emilyrodriguez',
+        imageUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      },
     },
-  },
-  {
-    body: 'The level of professionalism and expertise demonstrated throughout our project was outstanding. They not only met but exceeded our expectations at every turn.',
-    author: {
-      name: 'David Thompson',
-      handle: 'davidthompson',
-      imageUrl: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    {
+      body: 'The level of professionalism and expertise demonstrated throughout our project was outstanding. They not only met but exceeded our expectations at every turn.',
+      author: {
+        name: 'David Thompson',
+        handle: 'davidthompson',
+        imageUrl: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      },
     },
-  },
-  {
-    body: "I was blown away by the creativity and efficiency of this team. They took our vague idea and turned it into a brilliant reality. We'll definitely be working with them again in the future.",
-    author: {
-      name: 'Amanda Patel',
-      handle: 'amandapatel',
-      imageUrl: 'https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    {
+      body: "I was blown away by the creativity and efficiency of this team. They took our vague idea and turned it into a brilliant reality. We'll definitely be working with them again in the future.",
+      author: {
+        name: 'Amanda Patel',
+        handle: 'amandapatel',
+        imageUrl: 'https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      },
     },
-  },
-]
+  ])
   </script>
