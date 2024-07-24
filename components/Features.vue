@@ -41,7 +41,7 @@ const features = ref([
     description:
       'Blending performance with exceptional customer service, our PPC specialists are some of the best in the industry with a track record for growing successful businesses.',
     href: '#',
-    imageSrc: '/features1.webp',
+    imageSrc: '/feature1.webp',
     imageAlt: 'Digital marketing dashboard showing PPC campaign performance metrics.',
     imageWidth: 640,
     imageHeight: 427,
