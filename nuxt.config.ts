@@ -6,6 +6,6 @@ export default defineNuxtConfig({
   image: {
     provider: 'netlify',
     domains: ['images.unsplash.com', 'tailwindui.com'],
-    format: ['webp', 'avif', 'png', 'jpg'],
+    format: ['webp', 'png', 'jpg'],
   }
 })
