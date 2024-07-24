@@ -13,7 +13,7 @@
                 width="32"
                 height="32"
                 sizes="32px"
-                format="webp"
+                format="svg"
                 loading="eager"
               />
             </a>
@@ -40,7 +40,7 @@
                 width="32"
                 height="32"
                 sizes="32px"
-                format="webp"
+                format="svg"
                 loading="eager"
               />
             </a>
@@ -92,7 +92,6 @@
           sizes="(max-width: 1024px) 100vw, 50vw"
           width="1587"
           height="1058"
-          format="webp"
           loading="eager"
         />
       </div>

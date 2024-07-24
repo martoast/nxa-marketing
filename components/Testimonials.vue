@@ -20,7 +20,6 @@
                     width="40"
                     height="40"
                     sizes="40px"
-                    format="webp"
                     loading="lazy"
                   />
                   <div>
