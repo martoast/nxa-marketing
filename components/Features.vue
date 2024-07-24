@@ -20,7 +20,6 @@
                 class="object-cover object-center" 
                 :width="feature.imageWidth"
                 :height="feature.imageHeight"
-                sizes="(min-width: 1024px) 58.33vw, 100vw"
               />
               
             </div>
