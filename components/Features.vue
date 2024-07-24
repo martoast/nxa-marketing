@@ -41,7 +41,7 @@ const features = ref([
     description:
       'Blending performance with exceptional customer service, our PPC specialists are some of the best in the industry with a track record for growing successful businesses.',
     href: '#',
-    imageSrc: 'https://cdn.pixabay.com/photo/2019/06/19/07/13/email-4284157_640.png',
+    imageSrc: '/features1.webp',
     imageAlt: 'Digital marketing dashboard showing PPC campaign performance metrics.',
     imageWidth: 640,
     imageHeight: 427,
@@ -51,7 +51,7 @@ const features = ref([
     description:
       'Get more qualified traffic on the search terms that matter most to your business. We achieve measurable results by working on every variable that impacts SERPs. Trust our proven track record to maximize your visibility online. Set your business up for long-term success.',
     href: '#',
-    imageSrc: 'https://aicontentfy.com/hubfs/Blog/84276634-dbf3-4f26-a8d9-75de3ae6a979.png',
+    imageSrc: '/feature2.webp',
     imageAlt: 'Graph showing increase in organic search traffic over time.',
     imageWidth: 800,
     imageHeight: 600,
@@ -61,7 +61,7 @@ const features = ref([
     description:
       'Elevate your business with a trusted website that your customers will love. Our award-winning website designers will represent your brand in the best possible way. Your website will load extremely fast and look great on all devices.',
     href: '#',
-    imageSrc: 'https://cdn.prod.website-files.com/61f2affe3624fd98576da6f7/6406fe201a142c227f75eb3b_templates.png',
+    imageSrc: '/feature3.webp',
     imageAlt: 'Responsive website design mockups showing desktop, tablet, and mobile views.',
     imageWidth: 800,
     imageHeight: 600,
