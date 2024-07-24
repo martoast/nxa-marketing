@@ -6,14 +6,7 @@
           <nav class="flex items-center justify-between lg:justify-start" aria-label="Global">
             <a href="#" class="-m-1.5 p-1.5">
               <span class="sr-only">Your Company</span>
-              <NuxtImg
-                src="/logo.svg"
-                alt="Your Company"
-                class="h-8 w-auto"
-                width="32"
-                height="32"
-                format="svg"
-              />
+              <img src="/logo.svg" class="h-8" alt="logo">
             </a>
             <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700 lg:hidden" @click="mobileMenuOpen = true">
               <span class="sr-only">Open main menu</span>
@@ -31,15 +24,7 @@
           <div class="flex items-center justify-between">
             <a href="#" class="-m-1.5 p-1.5">
               <span class="sr-only">Your Company</span>
-              <NuxtImg
-                src="/logo.svg"
-                alt="Your Company"
-                class="h-8 w-auto"
-                width="32"
-                height="32"
-                sizes="32px"
-                format="svg"
-              />
+              <img src="/logo.svg" class="h-8" alt="logo">
             </a>
             <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = false">
               <span class="sr-only">Close menu</span>
