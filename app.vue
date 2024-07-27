@@ -8,7 +8,7 @@
     
     <Features id="features"/>
     
-    <CTA/>
+    <CTA2/>
     <Pricing/>
     
     <Testimonials/>
