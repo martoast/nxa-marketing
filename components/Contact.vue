@@ -50,36 +50,36 @@
             <div>
               <label for="first-name" class="block text-sm font-semibold leading-6 text-gray-900">First name</label>
               <div class="mt-2.5">
-                <input v-model="formData.firstName" type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" />
+                <input v-model="form.firstName" type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" />
               </div>
             </div>
             <div>
               <label for="last-name" class="block text-sm font-semibold leading-6 text-gray-900">Last name</label>
               <div class="mt-2.5">
-                <input v-model="formData.lastName" type="text" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" />
+                <input v-model="form.lastName" type="text" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" />
               </div>
             </div>
             <div class="sm:col-span-2">
               <label for="email" class="block text-sm font-semibold leading-6 text-gray-900">Email</label>
               <div class="mt-2.5">
-                <input v-model="formData.email" type="email" name="email" id="email" autocomplete="email" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" />
+                <input v-model="form.email" type="email" name="email" id="email" autocomplete="email" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" />
               </div>
             </div>
             <div class="sm:col-span-2">
               <label for="phone-number" class="block text-sm font-semibold leading-6 text-gray-900">Phone number</label>
               <div class="mt-2.5">
-                <input v-model="formData.phone" type="tel" name="phone-number" id="phone-number" autocomplete="tel" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" />
+                <input v-model="form.phone" type="tel" name="phone-number" id="phone-number" autocomplete="tel" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" />
               </div>
             </div>
             <div class="sm:col-span-2">
               <label for="message" class="block text-sm font-semibold leading-6 text-gray-900">Project details</label>
               <div class="mt-2.5">
-                <textarea v-model="formData.message" name="message" id="message" rows="4" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" />
+                <textarea v-model="form.message" name="message" id="message" rows="4" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" />
               </div>
             </div>
             <div class="sm:col-span-2">
               <div class="flex items-center">
-                <input v-model="formData.privacyPolicy" id="privacy-policy" name="privacy-policy" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" />
+                <input v-model="form.privacyPolicy" id="privacy-policy" name="privacy-policy" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" />
                 <label for="privacy-policy" class="ml-2 block text-sm text-gray-900">I agree to the privacy policy</label>
               </div>
             </div>
@@ -93,19 +93,10 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { BuildingOffice2Icon, EnvelopeIcon, PhoneIcon } from '@heroicons/vue/24/outline'
 
-interface FormInterface {
-  firstName: string;
-  lastName: string;
-  email: string;
-  phone: string;
-  message: string;
-  privacyPolicy: boolean;
-}
-
-const formData = ref<FormInterface>({
+const form = ref({
   firstName: '',
   lastName: '',
   email: '',
@@ -114,14 +105,14 @@ const formData = ref<FormInterface>({
   privacyPolicy: false
 })
 
-const validateForm = (): boolean => {
+const validateForm = () => {
   return (
-    formData.value.firstName.trim() !== '' &&
-    formData.value.lastName.trim() !== '' &&
-    formData.value.email.trim() !== '' &&
-    formData.value.phone.trim() !== '' &&
-    formData.value.message.trim() !== '' &&
-    formData.value.privacyPolicy
+    form.value.firstName.trim() !== '' &&
+    form.value.lastName.trim() !== '' &&
+    form.value.email.trim() !== '' &&
+    form.value.phone.trim() !== '' &&
+    form.value.message.trim() !== '' &&
+    form.value.privacyPolicy
   )
 }
 
@@ -130,22 +121,24 @@ const submitForm = async () => {
     try {
       const payload = {
         lead: {
-          firstName: formData.value.firstName,
-          lastName: formData.value.lastName,
-          email: formData.value.email,
-          phone: formData.value.phone,
-          message: formData.value.message
+          firstName: form.value.firstName,
+          lastName: form.value.lastName,
+          email: form.value.email,
+          phone: form.value.phone,
+          message: form.value.message
         }
       };
 
       console.log('Payload:', payload);
 
-      const formDataPayload = new FormData();
-      formDataPayload.append('payload', JSON.stringify(payload));
+      const headers = {
+        'Content-Type': 'application/json'
+      };
 
       const response = await fetch('/.netlify/functions/leadWebhook', {
         method: 'POST',
-        body: formDataPayload
+        headers: headers,
+        body: JSON.stringify(payload)
       });
 
       if (!response.ok) {
@@ -154,7 +147,7 @@ const submitForm = async () => {
 
       alert('Lead submitted successfully!')
       // Reset form
-      formData.value = {
+      form.value = {
         firstName: '',
         lastName: '',
         email: '',
