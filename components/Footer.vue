@@ -12,7 +12,7 @@
             <component :is="item.icon" class="h-6 w-6" aria-hidden="true" />
           </a>
         </div>
-        <p class="mt-10 text-center text-xs leading-5 text-gray-500">&copy; 2020 Your Company, Inc. All rights reserved.</p>
+        <p class="mt-10 text-center text-xs leading-5 text-gray-500">&copy; 2024 NXA-Marketing, Inc. All rights reserved.</p>
       </div>
     </footer>
   </template>
@@ -22,10 +22,10 @@
   
   const navigation = {
     main: [
-        { name: 'Home', href: '#' },
-        { name: 'About', href: '#' },
-        { name: 'Services', href: '#' },
-        { name: 'Contact', href: '#' }
+        { name: 'Home', href: '#hero' },
+        { name: 'About', href: '#stats' },
+        { name: 'Services', href: '#features' },
+        { name: 'Contact', href: '#contact' }
     ],
     social: [
       {
