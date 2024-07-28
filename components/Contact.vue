@@ -128,17 +128,12 @@ const validateForm = (): boolean => {
 const submitForm = async () => {
   if (validateForm()) {
     try {
-      const payload = {
-        lead: {
-          firstName: formData.value.firstName,
-          lastName: formData.value.lastName,
-          email: formData.value.email,
-          phone: formData.value.phone,
-          message: formData.value.message
-        }
-      };
-
-      console.log('Payload:', payload);
+      const payload = new FormData()
+      payload.append('firstName', formData.value.firstName)
+      payload.append('lastName', formData.value.lastName)
+      payload.append('email', formData.value.email)
+      payload.append('phone', formData.value.phone)
+      payload.append('message', formData.value.message)
 
       const response = await fetch('/.netlify/functions/leadWebhook', {
         method: 'POST',

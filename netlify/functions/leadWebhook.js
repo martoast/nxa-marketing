@@ -5,10 +5,13 @@ exports.handler = async (event, context) => {
   const headers = { 'Content-Type': 'application/json' };
 
   try {
+    // Parse the incoming request body
+    const payload = JSON.parse(event.body);
+
     const response = await fetch(webhookUrl, {
       method: 'POST',
       headers: headers,
-      body: event.body
+      body: JSON.stringify(payload)
     });
 
     const data = await response.json();
@@ -17,6 +20,7 @@ exports.handler = async (event, context) => {
       body: JSON.stringify(data)
     };
   } catch (error) {
+    console.error('Error in serverless function:', error);
     return {
       statusCode: 500,
       body: JSON.stringify({ error: 'Error forwarding request', details: error.message })
