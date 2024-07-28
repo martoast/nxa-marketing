@@ -1,21 +1,7 @@
-<!--
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
--->
 <template>
-    <div class="relative isolate bg-white">
-      <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
-        <div class="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
+  <div class="relative isolate bg-white">
+    <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
+      <div class="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
           <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
             <div class="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-gray-100 ring-1 ring-gray-900/10 lg:w-1/2">
               <svg class="absolute inset-0 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
@@ -58,49 +44,127 @@
             </dl>
           </div>
         </div>
-        <form action="#" method="POST" class="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48">
-          <div class="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
-            <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-              <div>
-                <label for="first-name" class="block text-sm font-semibold leading-6 text-gray-900">First name</label>
-                <div class="mt-2.5">
-                  <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" />
-                </div>
-              </div>
-              <div>
-                <label for="last-name" class="block text-sm font-semibold leading-6 text-gray-900">Last name</label>
-                <div class="mt-2.5">
-                  <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" />
-                </div>
-              </div>
-              <div class="sm:col-span-2">
-                <label for="email" class="block text-sm font-semibold leading-6 text-gray-900">Email</label>
-                <div class="mt-2.5">
-                  <input type="email" name="email" id="email" autocomplete="email" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" />
-                </div>
-              </div>
-              <div class="sm:col-span-2">
-                <label for="phone-number" class="block text-sm font-semibold leading-6 text-gray-900">Phone number</label>
-                <div class="mt-2.5">
-                  <input type="tel" name="phone-number" id="phone-number" autocomplete="tel" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" />
-                </div>
-              </div>
-              <div class="sm:col-span-2">
-                <label for="message" class="block text-sm font-semibold leading-6 text-gray-900">Project details</label>
-                <div class="mt-2.5">
-                  <textarea name="message" id="message" rows="4" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" />
-                </div>
+      <form @submit.prevent="submitForm" class="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48">
+        <div class="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
+          <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+            <div>
+              <label for="first-name" class="block text-sm font-semibold leading-6 text-gray-900">First name</label>
+              <div class="mt-2.5">
+                <input v-model="formData.firstName" type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" />
               </div>
             </div>
-            <div class="mt-8 flex justify-end">
-              <button type="submit" class="rounded-md bg-primary px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Get Your Free Proposal</button>
+            <div>
+              <label for="last-name" class="block text-sm font-semibold leading-6 text-gray-900">Last name</label>
+              <div class="mt-2.5">
+                <input v-model="formData.lastName" type="text" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" />
+              </div>
+            </div>
+            <div class="sm:col-span-2">
+              <label for="email" class="block text-sm font-semibold leading-6 text-gray-900">Email</label>
+              <div class="mt-2.5">
+                <input v-model="formData.email" type="email" name="email" id="email" autocomplete="email" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" />
+              </div>
+            </div>
+            <div class="sm:col-span-2">
+              <label for="phone-number" class="block text-sm font-semibold leading-6 text-gray-900">Phone number</label>
+              <div class="mt-2.5">
+                <input v-model="formData.phone" type="tel" name="phone-number" id="phone-number" autocomplete="tel" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" />
+              </div>
+            </div>
+            <div class="sm:col-span-2">
+              <label for="message" class="block text-sm font-semibold leading-6 text-gray-900">Project details</label>
+              <div class="mt-2.5">
+                <textarea v-model="formData.message" name="message" id="message" rows="4" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" />
+              </div>
+            </div>
+            <div class="sm:col-span-2">
+              <div class="flex items-center">
+                <input v-model="formData.privacyPolicy" id="privacy-policy" name="privacy-policy" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" />
+                <label for="privacy-policy" class="ml-2 block text-sm text-gray-900">I agree to the privacy policy</label>
+              </div>
             </div>
           </div>
-        </form>
-      </div>
+          <div class="mt-8 flex justify-end">
+            <button type="submit" class="rounded-md bg-primary px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Get Your Free Proposal</button>
+          </div>
+        </div>
+      </form>
     </div>
-  </template>
-  
-  <script setup>
-  import { BuildingOffice2Icon, EnvelopeIcon, PhoneIcon } from '@heroicons/vue/24/outline'
-  </script>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { BuildingOffice2Icon, EnvelopeIcon, PhoneIcon } from '@heroicons/vue/24/outline'
+
+interface FormInterface {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  message: string;
+  privacyPolicy: boolean;
+}
+
+const formData = ref<FormInterface>({
+  firstName: '',
+  lastName: '',
+  email: '',
+  phone: '',
+  message: '',
+  privacyPolicy: false
+})
+
+const validateForm = (): boolean => {
+  return (
+    formData.value.firstName.trim() !== '' &&
+    formData.value.lastName.trim() !== '' &&
+    formData.value.email.trim() !== '' &&
+    formData.value.phone.trim() !== '' &&
+    formData.value.message.trim() !== '' &&
+    formData.value.privacyPolicy
+  )
+}
+
+const submitForm = async () => {
+  if (validateForm()) {
+    try {
+      const payload = {
+        lead: {
+          firstName: formData.value.firstName,
+          lastName: formData.value.lastName,
+          email: formData.value.email,
+          phone: formData.value.phone,
+          message: formData.value.message
+        }
+      };
+
+      console.log('Payload:', payload);
+
+      const response = await fetch('/.netlify/functions/leadWebhook', {
+        method: 'POST',
+        body: payload
+      })
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok')
+      }
+
+      alert('Lead submitted successfully!')
+      // Reset form
+      formData.value = {
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        message: '',
+        privacyPolicy: false
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      alert('An error occurred while submitting your data. Please try again.')
+    }
+  } else {
+    alert('Please fill in all required fields and accept the privacy policy before submitting.')
+  }
+}
+</script>
