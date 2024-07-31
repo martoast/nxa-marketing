@@ -18,21 +18,14 @@
               </svg>
             </div>
             <h2 class="text-3xl font-bold tracking-tight text-gray-900">Let’s make things happen</h2>
-            <p class="mt-6 text-lg leading-8 text-gray-600">Partner with the #1 ranked digital marketing agency - before your competitor does.</p>
+            <p class="mt-6 text-lg leading-8 text-gray-600">Partner with us - before your competitor does.</p>
             <dl class="mt-10 space-y-4 text-base leading-7 text-gray-600">
-              <div class="flex gap-x-4">
-                <dt class="flex-none">
-                  <span class="sr-only">Address</span>
-                  <BuildingOffice2Icon class="h-7 w-6 text-gray-400" aria-hidden="true" />
-                </dt>
-                <dd>545 Mavis Island<br />Chicago, IL 99191</dd>
-              </div>
               <div class="flex gap-x-4">
                 <dt class="flex-none">
                   <span class="sr-only">Telephone</span>
                   <PhoneIcon class="h-7 w-6 text-gray-400" aria-hidden="true" />
                 </dt>
-                <dd><a class="hover:text-gray-900" href="tel:+1 (555) 234-5678">+1 (555) 234-5678</a></dd>
+                <dd><a class="hover:text-gray-900" href="tel:+1 (555) 234-5678">+1 (619) 888-5248</a></dd>
               </div>
               <div class="flex gap-x-4">
                 <dt class="flex-none">
