@@ -32,7 +32,7 @@
                   <span class="sr-only">Email</span>
                   <EnvelopeIcon class="h-7 w-6 text-gray-400" aria-hidden="true" />
                 </dt>
-                <dd><a class="hover:text-gray-900" href="mailto:hello@example.com">hello@example.com</a></dd>
+                <dd><a class="hover:text-gray-900" href="mailto:support@marketbenders.com">support@marketbenders.com</a></dd>
               </div>
             </dl>
           </div>
