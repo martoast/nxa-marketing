@@ -59,7 +59,7 @@
       author: {
         name: 'Emily Rodriguez',
         handle: 'emilyrodriguez',
-        imageUrl: '/testimonial3.webp',
+        imageUrl: '/testimonial2.webp',
       },
     },
     {
@@ -73,7 +73,7 @@
     {
       body: "I was blown away by the creativity and efficiency of this team. They took our vague idea and turned it into a brilliant reality. We'll definitely be working with them again in the future.",
       author: {
-        name: 'Amanda Patel',
+        name: 'Chris Patel',
         handle: 'amandapatel',
         imageUrl: '/testimonial5.webp',
       },

@@ -203,7 +203,7 @@ const submitForm = async () => {
         throw new Error('Network response was not ok')
       }
 
-      alert('Lead submitted successfully!')
+      alert('Submitted!!! We will be in touch.')
       // Reset form
       form.value = {
         firstName: '',
