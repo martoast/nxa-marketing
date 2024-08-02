@@ -29,7 +29,7 @@ useHead({
     lang: 'en'
   },
   meta: [
-    { name: 'description', content: 'NXA Marketing: Best-in-class digital marketing services. Get more traffic, acquire more customers, and sell more stuff. We work for businesses of all sizes.' }
+    { name: 'description', content: 'Market Benders: Best-in-class digital marketing services. Get more traffic, acquire more customers, and sell more stuff. We work for businesses of all sizes.' }
   ]
 })
 

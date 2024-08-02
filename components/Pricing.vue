@@ -28,7 +28,6 @@
                 <span class="text-5xl font-bold tracking-tight text-gray-900">$199</span>
                 <span class="text-sm font-semibold leading-6 tracking-wide text-gray-600">USD/Month</span>
               </p>
-              <p class="text-base font-semibold text-gray-600">Set up fee $500</p>
               <a href="#contact" class="mt-10 block w-full rounded-md bg-primary px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Get started</a>
             
             </div>
@@ -45,8 +44,8 @@ import { CheckIcon } from '@heroicons/vue/20/solid'
 const includedFeatures = [
   'Responsive Landing page',
   'Strategic SEO optimization',
-  'CRM Automation and Sales Funnel Buildout',
-  'Monthly performance analytics',
+  'CRM Automation and Sales Funnel',
+  'Automated email & SMS campaings',
   '24/7 email support',
 ]
 </script>
