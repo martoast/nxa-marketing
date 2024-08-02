@@ -51,7 +51,7 @@
       author: {
         name: 'Michael Chen',
         handle: 'michaelchen',
-        imageUrl: '/testimonial2.webp',
+        imageUrl: '/testimonial3.webp',
       },
     },
     {
@@ -81,8 +81,8 @@
     {
       body: 'I was impressed by the attention to detail and the quality of work. The project was completed on time and within budget. I highly recommend their services to anyone looking for top-notch results.',
       author: {
-        name: 'Michael Chen',
-        handle: 'michaelchen',
+        name: 'Erick Ayala',
+        handle: 'ErickAyala',
         imageUrl: '/testimonial6.webp',
       },
     },
