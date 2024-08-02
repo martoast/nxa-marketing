@@ -51,7 +51,7 @@
       author: {
         name: 'Michael Chen',
         handle: 'michaelchen',
-        imageUrl: '/testimonial.webp',
+        imageUrl: '/testimonial2.webp',
       },
     },
     {
@@ -59,7 +59,7 @@
       author: {
         name: 'Emily Rodriguez',
         handle: 'emilyrodriguez',
-        imageUrl: '/testimonial.webp',
+        imageUrl: '/testimonial3.webp',
       },
     },
     {
@@ -67,7 +67,7 @@
       author: {
         name: 'David Thompson',
         handle: 'davidthompson',
-        imageUrl: '/testimonial.webp',
+        imageUrl: '/testimonial4.webp',
       },
     },
     {
@@ -75,7 +75,7 @@
       author: {
         name: 'Amanda Patel',
         handle: 'amandapatel',
-        imageUrl: '/testimonial.webp',
+        imageUrl: '/testimonial5.webp',
       },
     },
     {
@@ -83,7 +83,7 @@
       author: {
         name: 'Michael Chen',
         handle: 'michaelchen',
-        imageUrl: '/testimonial.webp',
+        imageUrl: '/testimonial6.webp',
       },
     },
   ])

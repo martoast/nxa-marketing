@@ -35,12 +35,12 @@ import { ref } from 'vue'
 
 const features = ref([
   {
-    name: 'Improve your ROI with scalable PPC marketing.',
+    name: 'Personalized CRM and Pipeline Automations',
     description:
-      'Blending performance with exceptional customer service, our PPC specialists are some of the best in the industry with a track record for growing successful businesses.',
+      'We set up your business with a tailored CRM system, complete with powerful email and SMS automations. This personalized solution streamlines your workflows, enhances customer engagement, and boosts sales efficiency, allowing you to focus on growing your business.',
     href: '#',
     imageSrc: '/1.webp',
-    imageAlt: 'Digital marketing dashboard showing PPC campaign performance metrics.',
+    imageAlt: 'Custom CRM dashboard showcasing automated email and SMS campaigns.',
     imageWidth: 640,
     imageHeight: 427,
   },
