@@ -8,5 +8,10 @@ export default defineNuxtConfig({
     domains: ['images.unsplash.com', 'tailwindui.com'],
     format: ['webp', 'png', 'jpg', 'svg'],
     sizes: 'sm:100vw md:50vw lg:400px'
+  },
+  runtimeConfig: {
+    public: {
+      GTAG_ID: process.env.GTAG_ID,
+    }
   }
 })
