@@ -45,7 +45,7 @@ const includedFeatures = [
   'Responsive Landing page',
   'Strategic SEO optimization',
   'CRM Automation and Sales Funnel',
-  'Automated email & SMS campaings',
+  'Automated email & SMS Campaigns',
   '24/7 email support',
 ]
 </script>
