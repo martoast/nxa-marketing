@@ -64,5 +64,14 @@ const features = ref([
     imageWidth: 800,
     imageHeight: 600,
   },
+  {
+  name: 'Professional Reputation Management',
+  description: "Protect and enhance your brand's online reputation. Our expert team monitors and manages your reviews across all major platforms by implementing strategies to generate more positive reviews. Build trust, improve customer satisfaction, and turn your online reputation into a powerful marketing asset.",
+  href: '#',
+  imageSrc: '/google-reviews.webp',
+  imageAlt: 'Dashboard showing positive customer reviews and ratings',
+  imageWidth: 800,
+  imageHeight: 600,
+}
 ])
 </script>
