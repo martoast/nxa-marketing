@@ -72,7 +72,7 @@
                 <p class="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">We help businesses achieve remarkable growth.</p>
                 <p class="mt-8 text-base font-semibold text-white sm:mt-10">Find us on:</p>
                 <div class="mt-5 w-full sm:mx-auto sm:max-w-lg lg:ml-0">
-                  <div class="flex flex-wrap items-start">
+                  <div class="flex flex-wrap justify-start md:justify-center lg:justify-start">
                     <a v-for="item in social" target="_blank" :key="item.name" :href="item.href" class="flex justify-center px-3 text-white">
                       <span class="sr-only">{{ item.name }}</span>
                       <component :is="item.icon" class="h-8 w-8" aria-hidden="true" />
