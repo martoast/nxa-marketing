@@ -17,6 +17,7 @@
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.13",
     "nuxt": "^3.12.4",
+    "nuxt-gtag": "^3.0.1",
     "vue": "latest"
   },
   "devDependencies": {
