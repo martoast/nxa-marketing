@@ -5,9 +5,6 @@
           <p class="text-sm text-gray-700">
             We use cookies and similar technologies to help personalize content, tailor and measure ads, and provide a better experience. 
             By clicking 'Accept', you agree to this use of cookies.
-            <NuxtLink to="/privacy" class="text-primary hover:text-blue-500">
-              Learn more
-            </NuxtLink>
           </p>
         </div>
         <div class="flex gap-4">
