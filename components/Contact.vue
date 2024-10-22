@@ -25,7 +25,7 @@
                   <span class="sr-only">Telephone</span>
                   <PhoneIcon class="h-7 w-6 text-gray-400" aria-hidden="true" />
                 </dt>
-                <dd><a class="hover:text-gray-900" href="tel:+1 (555) 234-5678">+1 (619) 888-5248</a></dd>
+                <dd><a class="hover:text-gray-900" href="tel:+1(602)626-4274">+1 (602) 626-4274</a></dd>
               </div>
               <div class="flex gap-x-4">
                 <dt class="flex-none">
