@@ -29,7 +29,7 @@
             <div class="mx-auto max-w-xs px-8">
               <p class="text-base font-semibold text-gray-600">Partner with us today!</p>
               <p class="mt-6 pb-2 flex items-baseline justify-center gap-x-2">
-                <span class="text-5xl font-bold tracking-tight text-gray-900">$299</span>
+                <span class="text-5xl font-bold tracking-tight text-gray-900">$199</span>
                 <span class="text-sm font-semibold leading-6 tracking-wide text-gray-600">USD/month</span>
               </p>
               <a
