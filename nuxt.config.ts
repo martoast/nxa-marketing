@@ -6,12 +6,10 @@ export default defineNuxtConfig({
   image: {
     provider: 'netlify',
     domains: ['images.unsplash.com', 'tailwindui.com'],
-    format: ['webp', 'png', 'jpg', 'svg'],
+    format: ['webp', 'svg'],
     sizes: 'sm:100vw md:50vw lg:400px'
   },
-  runtimeConfig: {
-    public: {
-      GTAG_ID: process.env.GTAG_ID,
-    }
+  gtag: {
+    id: process.env.GTAG_ID
   }
 })
