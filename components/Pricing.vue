@@ -79,10 +79,6 @@ const includedFeatures = [
   {
     name: '24/7 Email Support',
     icon: EnvelopeIcon
-  },
-  {
-    name: 'Facebook & Google Ads',
-    icon: MegaphoneIcon
   }
 ]
 </script>
