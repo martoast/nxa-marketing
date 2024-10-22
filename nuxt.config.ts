@@ -10,6 +10,10 @@ export default defineNuxtConfig({
     sizes: 'sm:100vw md:50vw lg:400px'
   },
   gtag: {
+    initMode: 'manual',
     id: process.env.GTAG_ID
+  },
+  runtimeConfig: {
+    GTAG_ID: process.env.GTAG_ID
   }
 })

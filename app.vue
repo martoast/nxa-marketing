@@ -14,6 +14,7 @@
     <Testimonials/>
     <Contact id="contact"/>
     <Footer/>
+    <CookieConsent />
     
    
   </section>
