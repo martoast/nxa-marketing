@@ -20,6 +20,7 @@
                     width="40"
                     height="40"
                     sizes="40px"
+                    loading="lazy"
                   />
                   <div>
                     <div class="font-semibold text-gray-900">{{ testimonial.author.name }}</div>
