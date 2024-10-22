@@ -21,17 +21,18 @@
 
 <script setup>
 
-useHead({
+useServerSeoMeta({
+  ogType: 'website',
+  type: 'website',
+  author: 'Alex Martos',
+  robots: 'index, follow',
   title: 'Market Benders - Grow Your Brand',
-  description: 'Get more traffic. Acquire more customers. Sell more stuff. SmartSites works for businesses of all sizes.',
-  ogDescription: 'Get more traffic. Acquire more customers. Sell more stuff. SmartSites works for businesses of all sizes.',
-  htmlAttrs: {
-    lang: 'en'
-  },
-  meta: [
-    { name: 'description', content: 'Market Benders: Best-in-class digital marketing services. Get more traffic, acquire more customers, and sell more stuff. We work for businesses of all sizes.' }
-  ]
-})
+  ogTitle: 'Market Benders - Grow Your Brand',
+  description: 'We help businesses achieve remarkable growth.',
+  ogDescription: 'We help businesses achieve remarkable growth.',
+  ogImage: '/cta2.webp',
+  twitterCard: 'summary_large_image',
+});
 
 
 </script>
