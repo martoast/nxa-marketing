@@ -121,7 +121,7 @@
                     </div>
                     <div class="flex items-center">
                       <input v-model="form.privacyPolicy" id="privacy-policy" name="privacy-policy" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" />
-                      <label for="privacy-policy" class="ml-2 block text-sm text-gray-900">I agree to the privacy policy</label>
+                      <label for="privacy-policy" class="ml-2 block text-sm text-gray-900">I agree to the <a href="/privacy-policy" class="underline">privacy policy</a></label>
                     </div>
                     <div>
                       <button type="submit" class="flex w-full justify-center rounded-md border border-transparent bg-primary px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">Get Your Free Proposal</button>

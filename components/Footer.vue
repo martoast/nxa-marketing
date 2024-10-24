@@ -25,7 +25,9 @@
         { name: 'Home', href: '#hero' },
         { name: 'About', href: '#stats' },
         { name: 'Services', href: '#features' },
-        { name: 'Contact', href: '#contact' }
+        { name: 'Contact', href: '#contact' },
+        { name: 'Privacy policy', href: '/privacy-policy' },
+        { name: 'Terms of service', href: '/terms-of-service' }
     ],
     social: [
       {

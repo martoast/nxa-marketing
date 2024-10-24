@@ -73,7 +73,7 @@
             <div class="sm:col-span-2">
               <div class="flex items-center">
                 <input v-model="form.privacyPolicy" id="privacy-policy" name="privacy-policy" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" />
-                <label for="privacy-policy" class="ml-2 block text-sm text-gray-900">I agree to the privacy policy</label>
+                <label for="privacy-policy" class="ml-2 block text-sm text-gray-900">I agree to the <a href="/privacy-policy" class="underline">privacy policy</a></label>
               </div>
             </div>
           </div>
