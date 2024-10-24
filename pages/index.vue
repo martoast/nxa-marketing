@@ -23,8 +23,8 @@
   <script setup>
   
   useServerSeoMeta({
+    charset: 'utf-8',
     ogType: 'website',
-    type: 'website',
     author: 'Alex Martos',
     robots: 'index, follow',
     title: 'Market Benders - Grow Your Brand',
