@@ -14,6 +14,7 @@ export default defineNuxtConfig({
     id: process.env.GTAG_ID
   },
   runtimeConfig: {
-    GTAG_ID: process.env.GTAG_ID
+    GTAG_ID: process.env.GTAG_ID,
+    ZAPIER_WEBHOOK_URL: process.env.ZAPIER_WEBHOOK_URL
   }
 })
