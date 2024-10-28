@@ -1,44 +1,120 @@
 <template>
-    <div class="bg-white py-24 sm:py-32">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="mx-auto max-w-xl text-center">
-          <h2 class="text-lg font-semibold leading-8 tracking-tight text-primary">Testimonials</h2>
-          <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">We have worked with many amazing people</p>
-        </div>
-        <div class="mx-auto mt-16 flow-root max-w-2xl sm:mt-20 lg:mx-0 lg:max-w-none">
-          <div class="-mt-8 sm:-mx-4 sm:columns-2 sm:text-[0] lg:columns-3">
-            <div v-for="testimonial in testimonials" :key="testimonial.author.handle" class="pt-8 sm:inline-block sm:w-full sm:px-4">
-              <figure class="rounded-2xl bg-gray-50 p-8 text-sm leading-6">
-                <blockquote class="text-gray-900">
-                  <p>{{ `"${testimonial.body}"` }}</p>
-                </blockquote>
-                <figcaption class="mt-6 flex items-center gap-x-4">
-                  <NuxtImg
-                    class="h-10 w-10 rounded-full bg-gray-50"
+  <div class="bg-black py-24">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <!-- Header -->
+      <div class="mx-auto max-w-2xl text-center motion-safe:animate-fadeIn">
+        <h2 class="font-monument text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          What Our Clients Say
+        </h2>
+        <p class="mt-4 text-lg text-gray-300">
+          Don't just take our word for it - hear from some of our satisfied clients.
+        </p>
+      </div>
+
+      <!-- Carousel Section -->
+      <div class="mt-16 relative motion-safe:animate-fadeIn motion-safe:animate-delay-200">
+        <!-- Left Arrow -->
+        <button
+          @click="scrollLeft"
+          class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800/50 hover:bg-gray-800 shadow-lg rounded-full p-3 z-10 transition-colors duration-200"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            class="h-6 w-6 text-white"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+        </button>
+
+        <!-- Testimonials Container -->
+        <div
+          ref="scrollContainer"
+          class="flex overflow-x-auto space-x-6 py-4 px-8 hide-scrollbar"
+        >
+          <!-- Individual Testimonial Cards -->
+          <div
+            v-for="(testimonial, index) in testimonials"
+            :key="index"
+            class="flex-none w-[384px]"
+          >
+            <div class="relative h-full">
+              <!-- Gradient border wrapper -->
+              <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-indigo-500 via-blue-300 to-primary opacity-75 blur transition duration-500 group-hover:opacity-100"></div>
+              
+              <!-- Card Content -->
+              <div class="relative h-full rounded-2xl bg-slate-900 p-8 ring-1 ring-slate-800/25">
+                <!-- Star Rating -->
+                <div class="flex gap-1 mb-6">
+                  <svg
+                    v-for="star in 5"
+                    :key="star"
+                    class="h-5 w-5 text-yellow-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                </div>
+
+                <!-- Testimonial Text -->
+                <p class="text-lg text-gray-300 mb-8">{{ testimonial.body }}</p>
+
+                <!-- Author Info -->
+                <div class="flex items-center">
+                  <img
                     :src="testimonial.author.imageUrl"
-                    :alt="`Avatar of ${testimonial.author.name}`"
-                    width="40"
-                    height="40"
-                    sizes="40px"
-                    loading="lazy"
+                    :alt="testimonial.author.name"
+                    class="h-12 w-12 rounded-full object-cover"
                   />
-                  <div>
-                    <div class="font-semibold text-gray-900">{{ testimonial.author.name }}</div>
-                    <div class="text-gray-600">{{ `@${testimonial.author.handle}` }}</div>
+                  <div class="ml-4">
+                    <h4 class="text-base font-semibold text-white">
+                      {{ testimonial.author.name }}
+                    </h4>
+                    <p class="text-sm text-gray-400">@{{ testimonial.author.handle }}</p>
                   </div>
-                </figcaption>
-              </figure>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
+        <!-- Right Arrow -->
+        <button
+          @click="scrollRight"
+          class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800/50 hover:bg-gray-800 shadow-lg rounded-full p-3 z-10 transition-colors duration-200"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            class="h-6 w-6 text-white"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </button>
       </div>
     </div>
-  </template>
-  
-  <script setup>
-  import { ref } from 'vue'
-  
-  const testimonials = ref([
+  </div>
+</template>
+
+<script setup>
+import { ref } from 'vue'
+
+const testimonials = ref([
     {
       body: "The service exceeded all my expectations. The team was incredibly responsive and delivered a product that perfectly met our needs. I couldn't be happier with the results!",
       author: {
@@ -88,4 +164,23 @@
       },
     },
   ])
-  </script>
+const scrollContainer = ref(null)
+
+const scrollLeft = () => {
+  scrollContainer.value.scrollBy({ left: -400, behavior: 'smooth' })
+}
+
+const scrollRight = () => {
+  scrollContainer.value.scrollBy({ left: 400, behavior: 'smooth' })
+}
+</script>
+
+<style scoped>
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+</style>

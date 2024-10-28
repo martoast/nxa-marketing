@@ -1,47 +1,70 @@
 <template>
-  <div class="relative isolate bg-white">
+  <div class="relative bg-black">
     <div class="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
+      <!-- Left Column - Contact Info -->
       <div class="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
         <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-          <div class="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-gray-100 ring-1 ring-gray-900/10 lg:w-1/2">
-            <svg class="absolute inset-0 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
+          <!-- Decorative background -->
+          <div class="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden lg:w-1/2">
+            <div class="absolute inset-0 bg-gradient-to-tr from-black via-slate-900 to-slate-800 opacity-90"></div>
+            <svg 
+              class="absolute inset-0 h-full w-full stroke-gray-200/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" 
+              aria-hidden="true"
+            >
               <defs>
-                <pattern id="83fd4e5a-9d52-42fc-97b6-718e5d7ee527" width="200" height="200" x="100%" y="-1" patternUnits="userSpaceOnUse">
+                <pattern id="contact-pattern" width="200" height="200" x="100%" y="-1" patternUnits="userSpaceOnUse">
                   <path d="M130 200V.5M.5 .5H200" fill="none" />
                 </pattern>
               </defs>
-              <rect width="100%" height="100%" stroke-width="0" fill="white" />
-              <svg x="100%" y="-1" class="overflow-visible fill-gray-50">
-                <path d="M-470.5 0h201v201h-201Z" stroke-width="0" />
-              </svg>
-              <rect width="100%" height="100%" stroke-width="0" fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)" />
+              <rect width="100%" height="100%" stroke-width="0" fill="url(#contact-pattern)" />
             </svg>
           </div>
-          <h2 class="text-3xl font-bold tracking-tight text-gray-900">Let's make things happen</h2>
-          <p class="mt-6 text-lg leading-8 text-gray-600">Partner with us - before your competitor does.</p>
-          <dl class="mt-10 space-y-4 text-base leading-7 text-gray-600">
+
+          <!-- Content -->
+          <h2 class="font-monument text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Let's make things happen
+          </h2>
+          <p class="mt-6 text-lg leading-8 text-gray-300">
+            Partner with us - before your competitor does.
+          </p>
+          
+          <!-- Contact Details -->
+          <dl class="mt-10 space-y-4 text-base leading-7 text-gray-300">
             <div class="flex gap-x-4">
               <dt class="flex-none">
                 <span class="sr-only">Telephone</span>
-                <PhoneIcon class="h-7 w-6 text-gray-400" aria-hidden="true" />
+                <PhoneIcon class="h-7 w-6 text-blue-300" aria-hidden="true" />
               </dt>
-              <dd><a class="hover:text-gray-900" href="tel:+1(602)626-4274">+1 (602) 626-4274</a></dd>
+              <dd>
+                <a class="hover:text-blue-300 transition-colors duration-200" href="tel:+1(602)626-4274">
+                  +1 (602) 626-4274
+                </a>
+              </dd>
             </div>
             <div class="flex gap-x-4">
               <dt class="flex-none">
                 <span class="sr-only">Email</span>
-                <EnvelopeIcon class="h-7 w-6 text-gray-400" aria-hidden="true" />
+                <EnvelopeIcon class="h-7 w-6 text-blue-300" aria-hidden="true" />
               </dt>
-              <dd><a class="hover:text-gray-900" href="mailto:support@marketbenders.com">support@marketbenders.com</a></dd>
+              <dd>
+                <a class="hover:text-blue-300 transition-colors duration-200" href="mailto:support@marketbenders.com">
+                  support@marketbenders.com
+                </a>
+              </dd>
             </div>
           </dl>
         </div>
       </div>
+
+      <!-- Right Column - Contact Form -->
       <form @submit.prevent="submitForm" class="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48">
         <div class="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
           <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+            <!-- First Name -->
             <div>
-              <label for="first-name" class="block text-sm font-semibold leading-6 text-gray-900">First name</label>
+              <label for="first-name" class="block text-sm font-semibold leading-6 text-white">
+                First name
+              </label>
               <div class="mt-2.5">
                 <input 
                   v-model="form.firstName" 
@@ -53,12 +76,16 @@
                   maxlength="50"
                   pattern="[A-Za-z\s]+"
                   :disabled="isSubmitting"
-                  class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" 
+                  class="block w-full rounded-lg border-0 bg-slate-800 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-300 sm:text-sm sm:leading-6" 
                 />
               </div>
             </div>
+
+            <!-- Last Name -->
             <div>
-              <label for="last-name" class="block text-sm font-semibold leading-6 text-gray-900">Last name</label>
+              <label for="last-name" class="block text-sm font-semibold leading-6 text-white">
+                Last name
+              </label>
               <div class="mt-2.5">
                 <input 
                   v-model="form.lastName" 
@@ -70,12 +97,16 @@
                   maxlength="50"
                   pattern="[A-Za-z\s]+"
                   :disabled="isSubmitting"
-                  class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" 
+                  class="block w-full rounded-lg border-0 bg-slate-800 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-300 sm:text-sm sm:leading-6" 
                 />
               </div>
             </div>
+
+            <!-- Email -->
             <div class="sm:col-span-2">
-              <label for="email" class="block text-sm font-semibold leading-6 text-gray-900">Email</label>
+              <label for="email" class="block text-sm font-semibold leading-6 text-white">
+                Email
+              </label>
               <div class="mt-2.5">
                 <input 
                   v-model="form.email" 
@@ -87,12 +118,16 @@
                   maxlength="100"
                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                   :disabled="isSubmitting"
-                  class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" 
+                  class="block w-full rounded-lg border-0 bg-slate-800 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-300 sm:text-sm sm:leading-6" 
                 />
               </div>
             </div>
+
+            <!-- Phone -->
             <div class="sm:col-span-2">
-              <label for="phone-number" class="block text-sm font-semibold leading-6 text-gray-900">Phone number</label>
+              <label for="phone-number" class="block text-sm font-semibold leading-6 text-white">
+                Phone number
+              </label>
               <div class="mt-2.5">
                 <input 
                   v-model="form.phone" 
@@ -104,12 +139,16 @@
                   maxlength="20"
                   pattern="[\d\s\+\-\(\)]+"
                   :disabled="isSubmitting"
-                  class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" 
+                  class="block w-full rounded-lg border-0 bg-slate-800 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-300 sm:text-sm sm:leading-6" 
                 />
               </div>
             </div>
+
+            <!-- Message -->
             <div class="sm:col-span-2">
-              <label for="message" class="block text-sm font-semibold leading-6 text-gray-900">Project details</label>
+              <label for="message" class="block text-sm font-semibold leading-6 text-white">
+                Project details
+              </label>
               <div class="mt-2.5">
                 <textarea 
                   v-model="form.message" 
@@ -119,10 +158,12 @@
                   required
                   maxlength="1000"
                   :disabled="isSubmitting"
-                  class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" 
+                  class="block w-full rounded-lg border-0 bg-slate-800 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-300 sm:text-sm sm:leading-6" 
                 />
               </div>
             </div>
+
+            <!-- Privacy Policy -->
             <div class="sm:col-span-2">
               <div class="flex items-center">
                 <input 
@@ -132,22 +173,33 @@
                   type="checkbox" 
                   required
                   :disabled="isSubmitting"
-                  class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" 
+                  class="h-4 w-4 rounded border-gray-300 bg-slate-800 text-blue-300 focus:ring-blue-300" 
                 />
-                <label for="privacy-policy" class="ml-2 block text-sm text-gray-900">
-                  I agree to the <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" class="underline">privacy policy</a>
+                <label for="privacy-policy" class="ml-2 block text-sm text-gray-300">
+                  I agree to the <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" class="text-blue-300 underline hover:text-blue-400">privacy policy</a>
                 </label>
               </div>
             </div>
           </div>
+
+          <!-- Submit Button -->
           <div class="mt-8 flex justify-end">
-            <button 
-              type="submit" 
-              :disabled="isSubmitting || !isFormValid" 
-              class="rounded-md bg-primary px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-green-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              {{ isSubmitting ? 'Submitting...' : 'Get Your Free Proposal' }}
-            </button>
+            <div class="relative group">
+              <!-- Gradient border wrapper -->
+              <div 
+                class="absolute -inset-1 rounded-lg bg-gradient-to-r from-indigo-500 via-blue-300 to-primary opacity-75 blur transition duration-500 group-hover:opacity-100"
+                :class="{ 'opacity-40': !isFormValid || isSubmitting }"
+              ></div>
+              
+              <!-- Button -->
+              <button 
+                type="submit" 
+                :disabled="isSubmitting || !isFormValid" 
+                class="relative rounded-lg bg-black px-8 py-3 text-base font-semibold text-white shadow-sm transition-all duration-300 group-hover:transform group-hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {{ isSubmitting ? 'Submitting...' : 'Get Your Free Proposal' }}
+              </button>
+            </div>
           </div>
         </div>
       </form>

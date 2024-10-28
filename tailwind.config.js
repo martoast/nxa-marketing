@@ -12,6 +12,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        monument: ['MonumentExtended', 'sans-serif']  // Add this line
       },
     },
     colors: {
@@ -96,6 +97,19 @@ export default {
         '700': '#006a82',
         '800': '#00504f',
         '900': '#00361d',
+      },
+      yellow: {
+        50: '#fefce8',
+        100: '#fef9c3',
+        200: '#fef08a',
+        300: '#fde047',
+        400: '#facc15', // This is the standard yellow we typically use for stars
+        500: '#eab308',
+        600: '#ca8a04',
+        700: '#a16207',
+        800: '#854d0e',
+        900: '#713f12',
+        950: '#422006',
       },
     },
   },
