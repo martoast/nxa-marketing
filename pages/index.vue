@@ -11,7 +11,7 @@
     
 
     <CTA/>
-    <Pricing />
+    <Pricing id="pricing" />
 
     <Testimonials />
     <Contact id="contact" />

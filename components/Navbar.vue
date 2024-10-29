@@ -81,6 +81,7 @@
     { name: 'Home', href: '#hero' },
     { name: 'About', href: '#stats' },
     { name: 'Services', href: '#features' },
+    { name: 'Pricing', href: '#pricing' },
     { name: 'Contact', href: '#contact' }
   ]
   </script>

@@ -62,6 +62,7 @@ const navigation = {
     { name: 'Home', href: '#hero' },
     { name: 'About', href: '#stats' },
     { name: 'Services', href: '#features' },
+    { name: 'Pricing', href: '#pricing' },
     { name: 'Contact', href: '#contact' },
     { name: 'Privacy policy', href: '/privacy-policy' },
     { name: 'Terms of service', href: '/terms-of-service' }
