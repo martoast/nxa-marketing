@@ -3,7 +3,7 @@
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <!-- Header -->
       <div class="mx-auto max-w-4xl text-center">
-        <h2 class="font-monument text-base font-semibold leading-7 text-blue-300">Pricing</h2>
+        <h2 class="font-monument text-base font-semibold leading-7 text-brand-400">Pricing</h2>
         <p class="mt-2 text-balance font-monument text-4xl font-bold tracking-tight text-white sm:text-5xl">
           Scale Your Success
         </p>
@@ -13,7 +13,7 @@
       </div>
 
       <!-- Billing Toggle -->
-      <div class="mt-16 flex justify-center">
+      <div class="mt-16 flex flex-col items-center gap-3">
         <fieldset aria-label="Payment frequency">
           <RadioGroup 
             v-model="frequency" 
@@ -27,7 +27,7 @@
             >
               <div 
                 :class="[
-                  checked ? 'bg-gradient-to-r from-indigo-500 via-blue-300 to-primary text-white' : 'text-gray-400 hover:text-gray-300',
+                  checked ? 'bg-gradient-to-r from-brand-300 via-brand-400 to-brand-500 text-white' : 'text-gray-400 hover:text-gray-300',
                   'cursor-pointer rounded-full px-2.5 py-1 transition-colors duration-200'
                 ]"
               >
@@ -36,6 +36,15 @@
             </RadioGroupOption>
           </RadioGroup>
         </fieldset>
+        
+        <!-- Annual Savings Callout -->
+        <div 
+          v-if="frequency.value === 'annually'"
+          class="inline-flex items-center rounded-full bg-brand-400/10 px-4 py-1 text-sm font-medium text-brand-400"
+        >
+          <SparklesIcon class="mr-1.5 h-4 w-4" />
+          Save up to two months when paying annually!
+        </div>
       </div>
 
       <!-- Pricing Cards - 2x2 Grid -->
@@ -50,7 +59,7 @@
             :class="[
               'absolute -inset-[2px] rounded-3xl blur transition duration-500',
               tier.mostPopular 
-                ? 'bg-gradient-to-r from-indigo-500 via-blue-300 to-primary opacity-100' 
+                ? 'bg-gradient-to-r from-brand-300 via-brand-400 to-brand-500 opacity-100' 
                 : 'bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700 opacity-50 group-hover:opacity-75'
             ]"
           ></div>
@@ -63,13 +72,13 @@
                 <h3 
                   :id="tier.id" 
                   class="font-monument text-xl font-bold leading-8"
-                  :class="tier.mostPopular ? 'text-blue-300' : 'text-white'"
+                  :class="tier.mostPopular ? 'text-brand-400' : 'text-white'"
                 >
                   {{ tier.name }}
                 </h3>
                 <p 
                   v-if="tier.mostPopular" 
-                  class="rounded-full bg-blue-300/10 px-2.5 py-1 text-xs font-semibold leading-5 text-blue-300"
+                  class="rounded-full bg-brand-400/10 px-2.5 py-1 text-xs font-semibold leading-5 text-brand-400"
                 >
                   Most popular
                 </p>
@@ -98,7 +107,7 @@
                   class="flex gap-x-3"
                 >
                   <CheckIcon 
-                    class="h-6 w-5 flex-none text-blue-300" 
+                    class="h-6 w-5 flex-none text-brand-400" 
                     aria-hidden="true" 
                   />
                   {{ feature }}
@@ -106,7 +115,7 @@
               </ul>
             </div>
 
-            <!-- CTA Button - Fixed at bottom -->
+            <!-- CTA Button -->
             <div class="pt-8">
               <NuxtLink
                 :to="tier.href"
@@ -114,9 +123,7 @@
                 class="block w-full"
               >
                 <div class="relative group">
-                  <div 
-                    class="absolute -inset-1 rounded-lg bg-gradient-to-r from-indigo-500 via-blue-300 to-primary opacity-75 blur transition duration-500 group-hover:opacity-100"
-                  ></div>
+                  
                   <div 
                     class="relative flex items-center justify-center rounded-lg bg-black px-3 py-3 text-center text-sm font-semibold text-white transition-all duration-300 group-hover:transform group-hover:scale-[1.02]"
                   >
@@ -135,7 +142,7 @@
 <script setup>
 import { ref } from 'vue'
 import { RadioGroup, RadioGroupOption } from '@headlessui/vue'
-import { CheckIcon } from '@heroicons/vue/20/solid'
+import { CheckIcon, SparklesIcon } from '@heroicons/vue/20/solid'
 
 const frequencies = [
   { value: 'monthly', label: 'Monthly', priceSuffix: '/month' },
@@ -150,6 +157,7 @@ const tiers = [
     price: { monthly: '$199', annually: '$1,990' },
     description: 'Propel Your Business to the Top of Google Rankings and Outshine Competitors',
     features: [
+      'Free website and hosting',
       'Customer Relationship Management (CRM)',
       'Local SEO Optimization',
       'Google Business Profile Management',
@@ -169,8 +177,7 @@ const tiers = [
     description: 'Everything in Launchpad plus targeted ad management to supercharge your growth',
     features: [
       'All Launchpad features',
-      'Google Ads Management',
-      'Facebook Ads Management',
+      'Google or Facebook Ads Management',
       'Advanced Analytics',
       'Campaign Optimization',
       'Conversion Tracking',
@@ -187,6 +194,8 @@ const tiers = [
     description: 'Dominate across all major platforms with comprehensive ad management',
     features: [
       'All Growth Accelerator features',
+      'Google and Facebook ads Management',
+      'LinkedIn Ads Management',
       'TikTok Ads Management',
       'YouTube Ads Management',
       'Snapchat Ads Management',

@@ -2,7 +2,7 @@
     <div class="bg-black py-24 sm:py-32">
       <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:text-center">
-          <h2 class="font-monument text-base font-semibold leading-7 text-blue-300">Business Growth Statistics</h2>
+          <h2 class="font-monument text-base font-semibold leading-7 text-brand-400">Business Growth Statistics</h2>
           <p class="mt-2 text-pretty font-monument text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-balance">
             Real Results for Real Businesses
           </p>
@@ -19,12 +19,12 @@
               <dt class="flex items-start gap-x-3">
                 <component 
                   :is="stat.icon" 
-                  class="h-6 w-6 flex-none text-blue-300 mt-1" 
+                  class="h-6 w-6 flex-none text-brand-400 mt-1" 
                   aria-hidden="true" 
                 />
                 <div>
                   <div class="text-2xl font-bold font-monument text-white">{{ stat.percentage }}</div>
-                  <div class="text-lg font-semibold leading-7 text-blue-300">{{ stat.title }}</div>
+                  <div class="text-lg font-semibold leading-7 text-brand-400">{{ stat.title }}</div>
                 </div>
               </dt>
               <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">

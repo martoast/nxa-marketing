@@ -6,46 +6,45 @@
         <h1
           class="font-monument font-extrabold tracking-tight text-white text-3xl md:text-4xl"
         >
-          Unlock Explosive Growth with Our Automation Powerhouse
+          10x your business with our automation powerhouse
         </h1>
 
         <!-- Subheading -->
         <p class="mt-6 text-lg leading-8 text-gray-300 sm:text-xl">
-          Ready to 10x your business? Our all-in-one platform delivers
-          everything you need to scale fast—automating operations, maximizing
-          lead generation, and exploding your online presence. Whether it's CRM,
-          local SEO, or powerful automations, we've got you covered.
+          Our all-in-one platform delivers everything you need to scale
+          fast—automating operations, maximizing lead generation, and exploding
+          your online presence. Whether it's CRM, local SEO, or powerful
+          automations, we've got you covered.
         </p>
 
-          
-
-          <!-- CTA Button -->
+        <!-- CTA Button -->
         <div class="mt-10">
           <NuxtLink
             to="#contact"
             class="group relative inline-flex items-center gap-2"
           >
             <!-- Gradient border wrapper -->
-            <div 
-              class="absolute -inset-1 rounded-full bg-gradient-to-r from-indigo-500 via-blue-300 to-primary opacity-75 blur transition duration-500 group-hover:opacity-100"
+            <div
+              class="absolute -inset-1 rounded-full bg-gradient-to-r from-brand-300 via-brand-400 to-brand-500 opacity-75 blur transition duration-500 group-hover:opacity-100"
             ></div>
-            
+
             <!-- Button content -->
-            <div 
+            <div
               class="relative flex items-center rounded-full bg-black px-8 py-4 text-lg font-semibold text-white transition-all duration-300 group-hover:transform group-hover:scale-[1.02]"
             >
               <span>Unlock Explosive Growth</span>
-              <svg 
+              <svg
                 class="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
                 viewBox="0 0 448 512"
                 fill="currentColor"
                 aria-hidden="true"
               >
-                <path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/>
+                <path
+                  d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"
+                />
               </svg>
             </div>
           </NuxtLink>
-    
         </div>
       </div>
     </div>

@@ -22,7 +22,7 @@
               v-for="item in navigation"
               :key="item.name"
               :to="item.href"
-              class="font-monument text-base font-medium text-white transition-colors duration-300 hover:text-blue-300"
+              class="font-monument text-base font-medium text-white transition-colors duration-300 hover:text-brand-300"
             >
               {{ item.name }}
             </NuxtLink>
@@ -49,7 +49,7 @@
               </div>
               <div class="-mr-2">
                 <PopoverButton
-                  class="relative inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
+                  class="relative inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand-400"
                 >
                   <span class="absolute -inset-0.5" />
                   <span class="sr-only">Close menu</span>

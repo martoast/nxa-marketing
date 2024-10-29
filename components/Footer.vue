@@ -13,7 +13,7 @@
         >
           <NuxtLink 
             :to="item.href"
-            class="text-sm font-medium text-gray-400 transition-colors duration-300 hover:text-blue-300"
+            class="text-sm font-medium text-gray-400 transition-colors duration-300 hover:text-white"
           >
             {{ item.name }}
           </NuxtLink>
@@ -29,13 +29,10 @@
           target="_blank"
           class="group relative"
         >
-          <!-- Gradient border wrapper -->
-          <div 
-            class="absolute -inset-2 rounded-full bg-gradient-to-r from-indigo-500 via-blue-300 to-primary opacity-0 blur transition duration-300 group-hover:opacity-70"
-          ></div>
+          
           
           <!-- Icon -->
-          <div class="relative transition-transform duration-300 group-hover:scale-110">
+          <div>
             <span class="sr-only">{{ item.name }}</span>
             <component 
               :is="item.icon" 
@@ -48,7 +45,7 @@
 
       <!-- Copyright -->
       <div class="mt-10 flex flex-col items-center space-y-4">
-        <div class="h-px w-16 bg-gradient-to-r from-indigo-500 via-blue-300 to-primary"></div>
+        <div class="h-px w-16 bg-gradient-to-r from-brand-300 via-brand-400 to-brand-500"></div>
         <p class="text-center text-xs leading-5 text-gray-400">
           &copy; {{ new Date().getFullYear() }} Market Benders, Inc. All rights reserved.
         </p>

@@ -33,10 +33,10 @@
             <div class="flex gap-x-4">
               <dt class="flex-none">
                 <span class="sr-only">Telephone</span>
-                <PhoneIcon class="h-7 w-6 text-blue-300" aria-hidden="true" />
+                <PhoneIcon class="h-7 w-6 text-brand-400" aria-hidden="true" />
               </dt>
               <dd>
-                <a class="hover:text-blue-300 transition-colors duration-200" href="tel:+1(602)626-4274">
+                <a class="hover:text-brand-400 transition-colors duration-200" href="tel:+1(602)626-4274">
                   +1 (602) 626-4274
                 </a>
               </dd>
@@ -44,10 +44,10 @@
             <div class="flex gap-x-4">
               <dt class="flex-none">
                 <span class="sr-only">Email</span>
-                <EnvelopeIcon class="h-7 w-6 text-blue-300" aria-hidden="true" />
+                <EnvelopeIcon class="h-7 w-6 text-brand-400" aria-hidden="true" />
               </dt>
               <dd>
-                <a class="hover:text-blue-300 transition-colors duration-200" href="mailto:support@marketbenders.com">
+                <a class="hover:text-brand-400 transition-colors duration-200" href="mailto:support@marketbenders.com">
                   support@marketbenders.com
                 </a>
               </dd>
@@ -76,7 +76,7 @@
                   maxlength="50"
                   pattern="[A-Za-z\s]+"
                   :disabled="isSubmitting"
-                  class="block w-full rounded-lg border-0 bg-slate-800 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-300 sm:text-sm sm:leading-6" 
+                  class="block w-full rounded-lg border-0 bg-slate-800 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-400 sm:text-sm sm:leading-6" 
                 />
               </div>
             </div>
@@ -97,7 +97,7 @@
                   maxlength="50"
                   pattern="[A-Za-z\s]+"
                   :disabled="isSubmitting"
-                  class="block w-full rounded-lg border-0 bg-slate-800 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-300 sm:text-sm sm:leading-6" 
+                  class="block w-full rounded-lg border-0 bg-slate-800 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-400 sm:text-sm sm:leading-6" 
                 />
               </div>
             </div>
@@ -118,7 +118,7 @@
                   maxlength="100"
                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                   :disabled="isSubmitting"
-                  class="block w-full rounded-lg border-0 bg-slate-800 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-300 sm:text-sm sm:leading-6" 
+                  class="block w-full rounded-lg border-0 bg-slate-800 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-400 sm:text-sm sm:leading-6" 
                 />
               </div>
             </div>
@@ -139,7 +139,7 @@
                   maxlength="20"
                   pattern="[\d\s\+\-\(\)]+"
                   :disabled="isSubmitting"
-                  class="block w-full rounded-lg border-0 bg-slate-800 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-300 sm:text-sm sm:leading-6" 
+                  class="block w-full rounded-lg border-0 bg-slate-800 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-400 sm:text-sm sm:leading-6" 
                 />
               </div>
             </div>
@@ -158,7 +158,7 @@
                   required
                   maxlength="1000"
                   :disabled="isSubmitting"
-                  class="block w-full rounded-lg border-0 bg-slate-800 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-300 sm:text-sm sm:leading-6" 
+                  class="block w-full rounded-lg border-0 bg-slate-800 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-brand-400 sm:text-sm sm:leading-6" 
                 />
               </div>
             </div>
@@ -173,10 +173,10 @@
                   type="checkbox" 
                   required
                   :disabled="isSubmitting"
-                  class="h-4 w-4 rounded border-gray-300 bg-slate-800 text-blue-300 focus:ring-blue-300" 
+                  class="h-4 w-4 rounded border-gray-300 bg-slate-800 text-brand-400 focus:ring-brand-400" 
                 />
                 <label for="privacy-policy" class="ml-2 block text-sm text-gray-300">
-                  I agree to the <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" class="text-blue-300 underline hover:text-blue-400">privacy policy</a>
+                  I agree to the <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" class="text-brand-400 underline hover:text-brand-500">privacy policy</a>
                 </label>
               </div>
             </div>
@@ -187,7 +187,7 @@
             <div class="relative group">
               <!-- Gradient border wrapper -->
               <div 
-                class="absolute -inset-1 rounded-lg bg-gradient-to-r from-indigo-500 via-blue-300 to-primary opacity-75 blur transition duration-500 group-hover:opacity-100"
+                class="absolute -inset-1 rounded-lg bg-gradient-to-r from-brand-300 via-brand-400 to-brand-500 opacity-75 blur transition duration-500 group-hover:opacity-100"
                 :class="{ 'opacity-40': !isFormValid || isSubmitting }"
               ></div>
               
