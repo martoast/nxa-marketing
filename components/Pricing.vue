@@ -117,20 +117,21 @@
 
             <!-- CTA Button -->
             <div class="pt-8">
-              <NuxtLink
-                :to="tier.href"
+              <a
+                :href="tier.stripeLinks[frequency.value]"
                 :aria-describedby="tier.id"
                 class="block w-full"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <div class="relative group">
-                  
                   <div 
                     class="relative flex items-center justify-center rounded-lg bg-black px-3 py-3 text-center text-sm font-semibold text-white transition-all duration-300 group-hover:transform group-hover:scale-[1.02]"
                   >
                     Get started with {{ tier.name }}
                   </div>
                 </div>
-              </NuxtLink>
+              </a>
             </div>
           </div>
         </div>
@@ -153,7 +154,10 @@ const tiers = [
   {
     name: 'Launchpad',
     id: 'tier-launchpad',
-    href: '#contact',
+    stripeLinks: {
+      monthly: 'https://buy.stripe.com/cN26rYaS27bM8rS9AX',
+      annually: 'https://buy.stripe.com/dR68A65xI0NocI8aF2'
+    },
     price: { monthly: '$199', annually: '$1,990' },
     description: 'Propel Your Business to the Top of Google Rankings and Outshine Competitors',
     features: [
@@ -172,7 +176,10 @@ const tiers = [
   {
     name: 'Growth Accelerator',
     id: 'tier-growth',
-    href: '#contact',
+    stripeLinks: {
+      monthly: 'https://buy.stripe.com/eVag2y9NY9jU37y14t',
+      annually: 'https://buy.stripe.com/4gw17Ef8i3ZAdMc3cC'
+    },
     price: { monthly: '$299', annually: '$2,990' },
     description: 'Everything in Launchpad plus targeted ad management to supercharge your growth',
     features: [
@@ -189,7 +196,10 @@ const tiers = [
   {
     name: 'Growth Accelerator PLUS',
     id: 'tier-growth-plus',
-    href: '#contact',
+    stripeLinks: {
+      monthly: 'https://buy.stripe.com/8wM9Ea5xIanY6jK7sU',
+      annually: 'https://buy.stripe.com/28odUq6BM67I6jK3cr'
+    },
     price: { monthly: '$349', annually: '$3,490' },
     description: 'Dominate across all major platforms with comprehensive ad management',
     features: [
@@ -209,7 +219,10 @@ const tiers = [
   {
     name: 'Digital Powerhouse',
     id: 'tier-powerhouse',
-    href: '#contact',
+    stripeLinks: {
+      monthly: 'https://buy.stripe.com/28oeYud0a2VwgYo7sK',
+      annually: 'https://buy.stripe.com/cN2eYud0a9jU9vW4gB'
+    },
     price: { monthly: '$599', annually: '$5,990' },
     description: 'Complete digital dominance with full-service management and strategy',
     features: [
