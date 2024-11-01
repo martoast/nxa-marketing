@@ -165,7 +165,7 @@
 
             <!-- Privacy Policy -->
             <div class="sm:col-span-2">
-              <div class="flex items-center">
+              <div class="flex items-center mb-4">
                 <input 
                   v-model="form.privacyPolicy" 
                   id="privacy-policy" 
@@ -176,9 +176,13 @@
                   class="h-4 w-4 rounded border-gray-300 bg-slate-800 text-brand-400 focus:ring-brand-400" 
                 />
                 <label for="privacy-policy" class="ml-2 block text-sm text-gray-300">
-                  I agree to the <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" class="text-brand-400 underline hover:text-brand-500">privacy policy</a>
+                  I consent to receive SMS notifications and marketing communication from Market Benders. Message frequency varies. Message & Data rates may apply. You can reply STOP to unsubscribe at any time.
                 </label>
+                
               </div>
+              <a href="/privacy-policy" class="text-white underline text-center mr-6">Privacy policy</a>
+              <a href="/terms-of-service" class="text-white underline text-center">Terms of service</a>
+
             </div>
           </div>
 
