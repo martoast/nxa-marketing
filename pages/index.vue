@@ -16,7 +16,7 @@
     <Testimonials />
     <Contact id="contact" />
     <Footer />
-    <CookieConsent />
+    <!-- <CookieConsent /> -->
   </div>
 </template>
 
