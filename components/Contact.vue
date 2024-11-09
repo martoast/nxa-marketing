@@ -36,8 +36,8 @@
                 <PhoneIcon class="h-7 w-6 text-brand-400" aria-hidden="true" />
               </dt>
               <dd>
-                <a class="hover:text-brand-400 transition-colors duration-200" href="tel:+1(602)626-4274">
-                  +1 (602) 626-4274
+                <a class="hover:text-brand-400 transition-colors duration-200" href="tel:+1(973)981-7970">
+                  +1 (973) 981-7970
                 </a>
               </dd>
             </div>
