@@ -63,6 +63,7 @@ const navigation = {
     { name: 'About', href: '#stats' },
     { name: 'Services', href: '#features' },
     { name: 'Pricing', href: '#pricing' },
+    { name: 'Blog', href: 'https://info.marketbenders.com/blogs' },
     { name: 'Contact', href: '#contact' },
     { name: 'Privacy policy', href: '/privacy-policy' },
     { name: 'Terms of service', href: '/terms-of-service' }
